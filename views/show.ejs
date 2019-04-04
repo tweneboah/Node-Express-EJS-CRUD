@@ -1,0 +1,36 @@
+<% include partials/header %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form</title>
+</head>
+<body>
+    <div class="ui main text container segment">
+        <div class="ui huge header"><%=blog.title%></div>
+            <div class='ui top attached segment'>
+            <div class=item>
+               <img class='ui centered rounded image' src="<%=blog.image%>">
+            </div>
+            <div class='content'>
+               <span>Created: <%=blog.created.toDateString()%></span>
+            </div>
+            </div>
+            <div class='description'>
+            <p><%-blog.body%></p>
+            </div>
+           
+            <a href='/blogs/<%=blog._id%>/edit' class='ui basic red button'>Edit</a>
+
+           <form id ='delete' action='/blogs/<%=blog._id%>?_method=DELETE' method='POST'>
+                <button class='ui red basic button' >Delete</button>
+           </form>
+            
+         
+    </div>
+</body>
+</html>
+
+<% include partials/footer %>

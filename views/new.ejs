@@ -1,0 +1,34 @@
+<% include partials/header %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form</title>
+</head>
+<body>
+    <div class="ui main text container segment">
+        <div class="ui huge header"> New Blog</div>
+          <form action="/blogs" method="POST" class="ui form">
+            <div class="field">
+                <label> Title: </label>
+                <input type="text" name="blog[title]" placeholder="title">
+            </div>
+
+            <div class="field">
+                    <label> Image: </label>
+                    <input type="text" name="blog[image]" placeholder="image">
+             </div>
+
+             <div class="field">
+                    <label> Description: </label>
+                    <textarea name="blog[body]"></textarea>
+             </div>
+             <input type="submit" class="ui violet basic button">
+          </form>
+    </div>
+</body>
+</html>
+
+<% include partials/footer %>
